@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tesla Stock Price Predictor</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="page-grid">
+    <section class="panel panel-left">
+      <div class="panel-inner">
+        <div class="panel-heading">
+          <span class="eyebrow">Tesla Forecast</span>
+          <h1>Predict the Next Closing Price</h1>
+          <p>Use the latest Tesla stock data to generate a next-day closing price estimate from your model.</p>
+        </div>
+
+        <form id="predict-form" class="form-card">
+          <div class="field-row">
+            <div class="field-group">
+              <label for="Open">Open</label>
+              <input id="Open" name="Open" type="number" step="any" required />
+            </div>
+            <div class="field-group">
+              <label for="High">High</label>
+              <input id="High" name="High" type="number" step="any" required />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="Low">Low</label>
+              <input id="Low" name="Low" type="number" step="any" required />
+            </div>
+            <div class="field-group">
+              <label for="Close">Close</label>
+              <input id="Close" name="Close" type="number" step="any" required />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group full-width">
+              <label for="Volume">Volume</label>
+              <input id="Volume" name="Volume" type="number" step="any" required />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group">
+              <label for="Close_lag1">Close lag 1</label>
+              <input id="Close_lag1" name="Close_lag1" type="number" step="any" required />
+            </div>
+            <div class="field-group">
+              <label for="Close_lag2">Close lag 2</label>
+              <input id="Close_lag2" name="Close_lag2" type="number" step="any" required />
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field-group full-width">
+              <label for="Close_lag3">Close lag 3</label>
+              <input id="Close_lag3" name="Close_lag3" type="number" step="any" required />
+            </div>
+          </div>
+
+          <button type="submit">Predict Next Close</button>
+        </form>
+
+        <div id="message"></div>
+      </div>
+    </section>
+
+    <section class="panel panel-right">
+      <div class="side-panel">
+        <div class="brand-box">Tesla</div>
+        <p>High-performance stock modeling meets elegant design. This panel keeps a smart, modern look while the prediction form stays easy to use.</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
